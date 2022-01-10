@@ -1,23 +1,24 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Header from "./Header.js";
+import DropdownCities from "./DropdownCities";
+import Button from "./ButtonCategories";
+import Table from "./Table";
+
+import harrowData from "./data/Harrow.json";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header className="App-header" />
+      <DropdownCities />
+      <div>
+        <Button category="Pharmacies" />
+        <Button category="Schools & Colleges" />
+        <Button category="Hospitals" />
+        <Button category="Doctors" />
+      </div>
+      <Table city={harrowData} />
     </div>
   );
 }
