@@ -2,8 +2,12 @@ import React from "react";
 
 const Button = (props) => {
     return (
-        <button>{props.category}</button>
-    )
+      <button
+        onClick={(e) => props.getSelectedCategory(e.target.value)}
+        value={props.category}>
+        {props.category}
+      </button>
+    );
 }
 
 export default Button;

@@ -43,3 +43,14 @@ tr {
   border-collapse: collapse;
   padding: 10px;
 }
+
+th{
+  min-width: 200px;
+}
+table{
+  margin: 50px auto;
+}
+.div{
+  background-color: #808080;
+  width: 100%;
+}
